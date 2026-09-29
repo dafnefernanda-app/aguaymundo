@@ -100,18 +100,18 @@ export function HeroSlider() {
             key={`title-${index}`}
             className="animate-in fade-in slide-in-from-bottom-4 text-4xl leading-[1.08] text-forest-foreground duration-700 sm:text-5xl lg:text-6xl"
           >
-            {slides[index].title}
+            {slides[index]!.title}
           </h1>
-          {slides[index].text ? (
+          {slides[index]!.text ? (
             <p
               key={`text-${index}`}
               className="animate-in fade-in slide-in-from-bottom-3 mt-6 max-w-xl text-base leading-relaxed text-forest-foreground/85 duration-700 sm:text-lg"
             >
-              {slides[index].text}
+              {slides[index]!.text}
             </p>
           ) : null}
           <div className="mt-9 flex flex-wrap gap-3">
-            {slides[index].actions.map((action) => (
+            {slides[index]!.actions.map((action) => (
               <Button key={action.label} asChild size="lg" variant={action.variant}>
                 <Link to={action.to}>{action.label}</Link>
               </Button>
