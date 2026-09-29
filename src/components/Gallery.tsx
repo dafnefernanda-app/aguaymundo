@@ -56,7 +56,7 @@ export function Gallery() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={images[open].alt}
+          aria-label={images[open]!.alt}
           onClick={() => setOpen(null)}
           className="fixed inset-0 z-[60] flex items-center justify-center bg-[oklch(0.2_0.03_154/0.92)] p-6 animate-in fade-in duration-200"
         >
@@ -69,8 +69,8 @@ export function Gallery() {
             <X className="size-5" />
           </button>
           <img
-            src={images[open].src}
-            alt={images[open].alt}
+            src={images[open]!.src}
+            alt={images[open]!.alt}
             className="max-h-[85vh] w-auto max-w-full rounded-lg shadow-lift"
           />
         </div>

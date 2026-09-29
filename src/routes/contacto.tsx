@@ -11,9 +11,8 @@ import { site, whatsappLink } from "@/config/site";
 type ContactoSearch = { producto?: string };
 
 export const Route = createFileRoute("/contacto")({
-  validateSearch: (search: Record<string, unknown>): ContactoSearch => ({
-    producto: typeof search.producto === "string" ? search.producto : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): ContactoSearch =>
+    typeof search["producto"] === "string" ? { producto: search["producto"] } : {},
   head: () => ({
     meta: [
       { title: "Contacto | Solicita tu cotización de aguaymanto" },

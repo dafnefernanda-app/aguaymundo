@@ -8,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { productos } from "@/data/products";
 import { cn } from "@/lib/utils";
 
-type Errors = Record<string, string>;
+type FieldName = "nombre" | "email" | "telefono" | "mensaje";
+type Errors = Partial<Record<FieldName, string>>;
 
 const tiposCliente = [
   "Cliente particular",
@@ -61,7 +62,7 @@ export function ContactForm({ productoInicial = "" }: { productoInicial?: string
     );
   }
 
-  const fieldClass = (name: string) =>
+  const fieldClass = (name: FieldName) =>
     cn("mt-2", errors[name] && "border-destructive focus-visible:ring-destructive");
 
   return (
