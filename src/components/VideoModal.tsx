@@ -8,7 +8,7 @@ const VIDEO_URL = "https://www.youtube.com/embed/z0REqfpfhFI?autoplay=1&rel=0";
 export function VideoButton() {
   const open = () => {
     const host = document.createElement("div");
-    host.dataset.videoModal = "true";
+    host.dataset["videoModal"] = "true";
     document.body.appendChild(host);
     document.body.style.overflow = "hidden";
 
