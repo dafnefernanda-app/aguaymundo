@@ -117,6 +117,16 @@ export function HeroSlider() {
               </Button>
             ))}
           </div>
+          {index === 0 ? (
+            <div className="mt-3 sm:hidden" aria-hidden="false">
+              <VideoButton />
+            </div>
+          ) : null}
+          {index === 0 ? (
+            <div className="mt-3 hidden sm:block" aria-hidden="false">
+              <VideoButton />
+            </div>
+          ) : null}
         </div>
       </div>
 
