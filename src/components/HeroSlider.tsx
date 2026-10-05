@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
+import { VideoButton } from "@/components/VideoModal";
 import { Button } from "@/components/ui/button";
 import campo from "@/assets/hero-campo.jpg";
 import fruta from "@/assets/hero-fruta.jpg";
