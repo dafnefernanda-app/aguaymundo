@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Play, X } from "lucide-react";
 import { createPortal } from "react-dom";
 
@@ -54,28 +53,10 @@ export function VideoButton() {
   };
 
   return (
-    <Button
-      type="button"
-      onClick={open}
-      size="lg"
-      variant="onDark"
-      className="mt-3 sm:mt-0"
-    >
+    <Button type="button" onClick={open} size="lg" variant="onDark">
       <Play className="size-4" aria-hidden="true" />
       Ver video
     </Button>
   );
 }
 
-// Evita que el temporizador de animación del iframe (autoplay) se siga ejecutando
-// al desmontar: el cierre remueve el host y con él el iframe.
-export function useVideoCleanup() {
-  useEffect(() => {
-    return () => {
-      document.body.style.overflow = "";
-      document
-        .querySelectorAll("[data-video-modal]")
-        .forEach((el) => el.remove());
-    };
-  }, []);
-}
