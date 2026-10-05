@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Play, X } from "lucide-react";
+import { createPortal } from "react-dom";
 
 import { Button } from "@/components/ui/button";
 
